@@ -27,10 +27,22 @@ public class Program {
 		for(Seller x: list) {
 			System.out.println(x);
 		}
+		
+		System.out.println("TEST UPDATE");
 		Seller sel = sellerDao.findById(7);
 		sel.setBaseSalary(4500.0);
 		sellerDao.update(sel);
 		System.out.println("Update complete! ");
+		
+		System.out.println("-- TEST Delete --");
+		
+		sellerDao.deleteById(9);
+		
+		list = sellerDao.findAll();
+		
+		for(Seller x: list) {
+			System.out.println(x);
+		}
 	}
 
 }
