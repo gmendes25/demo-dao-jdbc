@@ -13,6 +13,7 @@ public class Program {
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();		
 		
+		System.out.println("Find By Department TEST");
 		Department dep = new Department(2,null);
 		List<Seller> list = sellerDao.findByDepartment(dep);
 		
@@ -43,6 +44,8 @@ public class Program {
 		for(Seller x: list) {
 			System.out.println(x);
 		}
+		
+		
 	}
 
 }
